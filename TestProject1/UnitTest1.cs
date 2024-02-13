@@ -4,12 +4,6 @@ namespace TestProject1
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-
-        }
-
         [Test]
         public void Sum_CheckIsCorrect()
         {
@@ -21,7 +15,7 @@ namespace TestProject1
             double mySum = TaskNo01.Sum(number1, number2);
 
             //Assert
-            Assert.AreEqual(4, mySum);
+            Assert.That(mySum, Is.EqualTo(4));
         }
 
         [Test]
@@ -35,7 +29,7 @@ namespace TestProject1
             double mySum = TaskNo01.Substract(number1, number2);
 
             //Assert
-            Assert.AreEqual(0, mySum);
+            Assert.That(mySum, Is.EqualTo(0));
         }
 
         [Test]
@@ -49,7 +43,7 @@ namespace TestProject1
             double mySum = TaskNo01.Multiplication(number1, number2);
 
             //Assert
-            Assert.AreEqual(10, mySum);
+            Assert.That(mySum, Is.EqualTo(10));
         }
 
         [Test]
@@ -63,7 +57,7 @@ namespace TestProject1
             double mySum = TaskNo01.Devide(number1, number2);
 
             //Assert
-            Assert.AreEqual(2.5, mySum);
+            Assert.That(mySum, Is.EqualTo(2.5));
         }
 
         [Test]
@@ -77,7 +71,7 @@ namespace TestProject1
             double mySum = TaskNo01.Sqrt(number1, number2);
 
             //Assert
-            Assert.AreEqual(3.16, mySum);
+            Assert.That(mySum, Is.EqualTo(3.16));
         }
 
         [Test]
@@ -91,7 +85,7 @@ namespace TestProject1
             double mySum = TaskNo01.Pow(number1, number2);
 
             //Assert
-            Assert.AreEqual(378.1, mySum);
+            Assert.That(mySum, Is.EqualTo(378.1));
         }
     }
 }
