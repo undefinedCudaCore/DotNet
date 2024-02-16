@@ -1,4 +1,6 @@
-﻿namespace _13_array_01
+﻿using System;
+
+namespace _13_array_01
 {
     internal static class TaskNo03
     {
@@ -54,13 +56,66 @@
             return ints;
         }
 
+        //Relpaces arrays element.
+        //Second argument is value to replace whith.
+        //Third argument is arrays element index.
+        internal static int[] AddElementToIntArray(int[] ints, int value, int arrayIndex)
+        {
+            int[] array1 = new int[arrayIndex];
+            int[] array2 = new int[ints.Length - array1.Length];
+            int[] result = new int[array1.Length + array2.Length + 1];
+
+            for (int i = 0; i < array1.Length; i++)
+            {
+                array1[i] = ints[i];
+                result[i] = array1[i];
+            }
+
+            result[arrayIndex] = value;
+
+            for (int i = 1; i <= array2.Length; i++)
+            {
+                array2[i - 1] = ints[array1.Length - 1 + i];
+                result[array1.Length + i] = array2[i - 1];
+            }
+
+
+            return result;
+        }
+
         //Removes element from array
         //Second argument is  value index to remove from array.
         internal static double[] RemoveElementFromArray(double[] doubles, int arrayIndex)
         {
-            doubles = doubles.Where((value, index) => index != arrayIndex).ToArray();
+            //doubles = doubles.Where((value, index) => index != arrayIndex).ToArray();
+            doubles[arrayIndex] = double.NaN;
+            int count = 0;
 
-            return doubles;
+            for (int i = 0; i < doubles.Length; i++)
+            {
+                if (double.IsNaN(doubles[i]))
+                {
+                    break;
+                }
+                count++;
+            }
+
+
+            double[] array1 = new double[count];
+            double[] array2 = new double[doubles.Length - 1 - arrayIndex];
+            double[] result = new double[array1.Length + array2.Length];
+
+            for (int i = 0; i < array1.Length; i++)
+            {
+                array1[i] = doubles[i];
+                result[i] = array1[i];
+            }
+            for (int i = 1; i <= array2.Length; i++)
+            {
+                array2[i - 1] = doubles[array1.Length + i];
+                result[array1.Length + i - 1] = array2[i - 1];
+            }
+            return result;
         }
     }
 }

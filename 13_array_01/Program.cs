@@ -106,7 +106,7 @@
 
             //}
 
-            ////------------------------------------------------------------------Taks NO 03.3.
+            ////------------------------------------------------------------------Taks NO 03.3 - replace.
             //int[] valueArray = new int[10];
             //TaskNo03.ReplaceArrayElement(valueArray, 1058, 0);
             //TaskNo03.ReplaceArrayElement(valueArray, 5, 2);
@@ -126,16 +126,26 @@
             //    Console.WriteLine(item);
             //}
 
+            ////------------------------------------------------------------------Taks NO 03.3
+
+            int[] addedValue = TaskNo03.AddElementToIntArray(arrayWithInitialValues, 100, arrayWithInitialValues.Length);
+
+            for (int i = 0; i < addedValue.Length; i++)
+            {
+                Console.WriteLine(addedValue[i]);
+            }
+
             ////------------------------------------------------------------------Taks NO 03.4.
 
-            double[] value = { 1.2, 2.2, 3.4, 4.0, 5, 8, 62 };
+            //double[] value = { 1.2, 2.2, 3.4, 4.0, 5, 8, 62 };
 
-            value = TaskNo03.RemoveElementFromArray(value, 5);
+            //double[] removedValue = TaskNo03.RemoveElementFromArray(value, value.Length - 1);
+            ////removedValue = TaskNo03.RemoveElementFromArray(value, 6);
 
-            for (int i = 0; i < value.Length; i++)
-            {
-                Console.WriteLine(value[i]);
-            }
+            //for (int i = 0; i < removedValue.Length; i++)
+            //{
+            //    Console.WriteLine(removedValue[i]);
+            //}
         }
     }
 }
