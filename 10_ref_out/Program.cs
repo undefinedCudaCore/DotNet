@@ -39,9 +39,11 @@
 
 
             //Task 02.1-----------------------------------
+            string name = "tadas";
+            string surename = "blinda";
 
-            //TaskNo02.GetUserData(out string name, out string surename);
-
+            TaskNo02.GetUserData(name, surename, out name, out surename);
+            Console.WriteLine($"Jusu vardas ir pavade yra {name} {surename}.");
 
             //Task 02.2-----------------------------------
 

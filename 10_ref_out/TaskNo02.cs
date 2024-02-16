@@ -2,34 +2,38 @@
 {
     public static class TaskNo02
     {
-        public static void GetUserData(out string name, out string surename)
+        public static void GetUserData(string namie, string surenamie, out string name, out string surename)
         {
-            name = "";
-            surename = "";
 
-            Intro.WriteGreeting("name");
-            string isStringOne = Console.ReadLine();
+            //Intro.WriteGreeting("name");
+            //name = Console.ReadLine();
 
-            Intro.WriteGreeting("surename");
-            string isStringTwo = Console.ReadLine();
+            name = namie;
 
-            if (!String.IsNullOrEmpty(isStringOne)
-                && !String.IsNullOrEmpty(isStringTwo)
-                && !String.IsNullOrWhiteSpace(isStringOne)
-                && !String.IsNullOrWhiteSpace(isStringTwo))
+            //string inputName = Console.ReadLine();
+
+            //Intro.WriteGreeting("surename");
+            //surename = Console.ReadLine();
+
+            surename = surenamie;
+
+            //string InputSurename = Console.ReadLine();
+
+            if (!String.IsNullOrEmpty(name)
+                && !String.IsNullOrEmpty(surename)
+                && !String.IsNullOrWhiteSpace(name)
+                && !String.IsNullOrWhiteSpace(surename))
             {
-                name = (isStringOne.Substring(0, 1).ToUpper()) +
-                    (isStringOne.Substring(1, isStringOne.Length - 1));
-                surename = (isStringTwo.Substring(0, 1).ToUpper()) +
-                    (isStringTwo.Substring(1, isStringTwo.Length - 1));
-
-                Console.WriteLine($"Jusu vardas ir pavade yra {name} {surename}.");
+                name = (name.Substring(0, 1).ToUpper()) +
+                    (name.Substring(1, name.Length - 1));
+                surename = (surename.Substring(0, 1).ToUpper()) +
+                    (surename.Substring(1, surename.Length - 1));
             }
             else
             {
                 Console.WriteLine("Check what you entered:");
-                Console.WriteLine($"Name: {isStringOne}");
-                Console.WriteLine($"Surename: {isStringTwo}");
+                Console.WriteLine($"Name: {name}");
+                Console.WriteLine($"Surename: {surename}");
             }
         }
 
@@ -57,15 +61,15 @@
             }
         }
 
-        internal static double Devide(out double number1, out double number2, out double remainder)
+        public static double Devide(string numberString1, string numberString2, out double remainder)
         {
             remainder = 0;
 
-            Console.WriteLine("Enter first number:");
-            bool isNumberOneNumeric = double.TryParse(Console.ReadLine(), out number1);
+            //Console.WriteLine("Enter first number:");
+            bool isNumberOneNumeric = double.TryParse(numberString1, out double number1);
 
-            Console.WriteLine("Enter second number:");
-            bool isNumberTwoNumeric = double.TryParse(Console.ReadLine(), out number2);
+            //Console.WriteLine("Enter second number:");
+            bool isNumberTwoNumeric = double.TryParse(numberString2, out double number2);
 
             double devision = number1 / number2;
 
@@ -83,7 +87,7 @@
             else
             {
                 Console.WriteLine("Dalyba is 0 negalima.");
-                return -1;
+                return double.NaN;
             }
         }
 
