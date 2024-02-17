@@ -57,7 +57,7 @@ namespace _13_array_01
         }
 
         //Relpaces arrays element.
-        //Second argument is value to replace whith.
+        //Second argument is value to add into array.
         //Third argument is arrays element index.
         internal static int[] AddElementToIntArray(int[] ints, int value, int arrayIndex)
         {
@@ -117,5 +117,25 @@ namespace _13_array_01
             }
             return result;
         }
+
+        //Returns array whith values, that repeats in two given arrays
+        internal static string[] ReturnsValueWgichRepeatsInTwoArrays(string[] firstArray, string[] secondArray)
+        {
+            string[] repeatedValue = new string[firstArray.Length];
+
+            for (int i = 0; i < firstArray.Length; i++)
+            {
+                for (int j = 0; j < secondArray.Length; j++)
+                {
+                    if (firstArray[i] == secondArray[j])
+                    {
+                        repeatedValue[i] = secondArray[j];
+                    }
+                }
+            }
+
+
+            return repeatedValue;
+        }
     }
-}
+ }

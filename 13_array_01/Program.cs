@@ -1,4 +1,6 @@
-﻿namespace _13_array_01
+﻿using System.Text.Json.Serialization;
+
+namespace _13_array_01
 {
     internal static class Program
     {
@@ -128,12 +130,12 @@
 
             ////------------------------------------------------------------------Taks NO 03.3
 
-            int[] addedValue = TaskNo03.AddElementToIntArray(arrayWithInitialValues, 100, arrayWithInitialValues.Length);
+            //int[] addedValue = TaskNo03.AddElementToIntArray(arrayWithInitialValues, 100, arrayWithInitialValues.Length);
 
-            for (int i = 0; i < addedValue.Length; i++)
-            {
-                Console.WriteLine(addedValue[i]);
-            }
+            //for (int i = 0; i < addedValue.Length; i++)
+            //{
+            //    Console.WriteLine(addedValue[i]);
+            //}
 
             ////------------------------------------------------------------------Taks NO 03.4.
 
@@ -146,6 +148,20 @@
             //{
             //    Console.WriteLine(removedValue[i]);
             //}
+
+            ////------------------------------------------------------------------Additional task No 01.
+            string textForFirstArray = "Tadas blindas geras voras zmogus";
+            string textForSecondArray = "Tadas blindas blogas voras zmogus";
+
+            string[] array1 = textForFirstArray.Split(' ');
+            string[] array2 = textForSecondArray.Split(' ');
+
+            string[] returnedValue = TaskNo03.ReturnsValueWgichRepeatsInTwoArrays(array1, array2);
+
+            foreach (string repeatedWord in returnedValue)
+            {
+                Console.WriteLine(repeatedWord);
+            }
         }
     }
 }
