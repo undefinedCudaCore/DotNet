@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace _13_array_01
+﻿namespace _13_array_01
 {
     internal static class TaskNo03
     {
-        // Sorts int array from lowest arrays value to highiest
+        // Sorts int array from lowest array value to highest
         internal static int[] FromLowToHighValue(int[] ints)
         {
             int temporaryValue;
@@ -25,7 +23,7 @@ namespace _13_array_01
             return ints;
         }
 
-        // Sorts int array from highiest arrays value to lowest
+        // Sorts int array from highest array value to lowest
         internal static int[] FromHighToLowValue(int[] ints)
         {
             int temporaryValue;
@@ -45,10 +43,9 @@ namespace _13_array_01
 
             return ints;
         }
-
-        //Relpaces arrays element.
-        //Second argument is value to replace whith.
-        //Third argument is arrays element index.
+        //Relpaces arrays element.
+        //Second argument is value to replace with.
+        //Third argument is arrays element index.
         internal static int[] ReplaceArrayElement(int[] ints, int value, int arrayIndex)
         {
             ints[arrayIndex] = value;
@@ -57,7 +54,7 @@ namespace _13_array_01
         }
 
         //Relpaces arrays element.
-        //Second argument is value to add into array.
+        //Second argument is a value to add to the array.
         //Third argument is arrays element index.
         internal static int[] AddElementToIntArray(int[] ints, int value, int arrayIndex)
         {
@@ -83,8 +80,8 @@ namespace _13_array_01
             return result;
         }
 
-        //Removes element from array
-        //Second argument is  value index to remove from array.
+        //Removes elements from an array
+        //Second argument is the value index to remove from the array.
         internal static double[] RemoveElementFromArray(double[] doubles, int arrayIndex)
         {
             //doubles = doubles.Where((value, index) => index != arrayIndex).ToArray();
@@ -118,24 +115,64 @@ namespace _13_array_01
             return result;
         }
 
-        //Returns array whith values, that repeats in two given arrays
-        internal static string[] ReturnsValueWgichRepeatsInTwoArrays(string[] firstArray, string[] secondArray)
+        //Returns an array with values that repeats in two given arrays.
+        internal static IEnumerable<string> ReturnsValueWhichRepeatsInTwoArrays(string[] firstArray, string[] secondArray)
         {
-            string[] repeatedValue = new string[firstArray.Length];
+            string[] newOne = firstArray.Where(secondArray.Contains).ToArray();
+            IEnumerable<string> result = newOne.Distinct();
 
-            for (int i = 0; i < firstArray.Length; i++)
+            return result;
+        }
+
+        //Returns an array with values that does not repeat in two given arrays.
+        internal static IEnumerable<string> ReturnsValueWhichDoNotInTwoArrays(string[] array1, string[] array2)
+        {
+            string[] arrayConcat = new string[array1.Length + array2.Length];
+
+            for (int i = 0; i < array1.Length; i++)
             {
-                for (int j = 0; j < secondArray.Length; j++)
-                {
-                    if (firstArray[i] == secondArray[j])
-                    {
-                        repeatedValue[i] = secondArray[j];
-                    }
-                }
+                arrayConcat[i] = array1[i];
+            }
+            for (int i = 0; i < array2.Length; i++)
+            {
+                arrayConcat[array1.Length + i] = array2[i];
             }
 
+            IEnumerable<string> result = arrayConcat.Distinct();
 
-            return repeatedValue;
+            return result;
+        }
+
+        internal static string[] EraseEmptiStringValueFromArray(string[] arrayToClearWhitespace)
+        {
+            int count = 0;
+
+            for (int i = 0; i < arrayToClearWhitespace.Length; i++)
+            {
+                if (String.IsNullOrWhiteSpace(arrayToClearWhitespace[i]))
+                {
+                    break;
+                }
+                count++;
+            }
+
+            string[] array1 = new string[count];
+            int count2 = arrayToClearWhitespace.Length - (array1.Length + 1);
+            string[] array2 = new string[count2];
+            string[] result = new string[array1.Length + array2.Length];
+
+            for (int i = 0; i < array1.Length; i++)
+            {
+                array1[i] = arrayToClearWhitespace[i];
+                result[i] = array1[i];
+            }
+            for (int i = 1; i <= array2.Length; i++)
+            {
+                array2[i - 1] = arrayToClearWhitespace[array1.Length + i];
+                result[array1.Length + i - 1] = array2[i - 1];
+            }
+
+            return result;
         }
     }
- }
+}
