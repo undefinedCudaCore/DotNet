@@ -116,16 +116,49 @@
         }
 
         //Returns an array with values that repeats in two given arrays.
-        internal static IEnumerable<string> ReturnsValueWhichRepeatsInTwoArrays(string[] firstArray, string[] secondArray)
-        {
-            string[] newOne = firstArray.Where(secondArray.Contains).ToArray();
-            IEnumerable<string> result = newOne.Distinct();
+        //internal static IEnumerable<string> ReturnsValueWhichRepeatsInTwoArrays(string[] firstArray, string[] secondArray)
+        //{
 
-            return result;
+        //    string[] newOne = firstArray.Where(secondArray.Contains).ToArray();
+        //    IEnumerable<string> result = newOne.Distinct();
+
+        //    return result;
+        //}
+
+        //Returns an array with values that repeats in two given arrays
+
+        internal static void ReturnsValueWhichRepeatsInTwoArrays2(string[] firstArray, string[] secondArray)
+        {
+            string[] result = new string[firstArray.Length - 1];
+
+            int count = 0;
+            foreach (var firstItem in firstArray)
+            {
+
+                foreach (var secondItem in secondArray)
+                {
+                    if (firstItem == secondItem)
+                    {
+
+                        result[count++] = firstItem;
+                        break;
+                    }
+                }
+            }
+
+            result = result.Distinct().ToArray();
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                if (!String.IsNullOrEmpty(result[i]))
+                {
+                    Console.WriteLine(result[i]);
+                }
+            }
         }
 
         //Returns an array with values that does not repeat in two given arrays.
-        internal static IEnumerable<string> ReturnsValueWhichDoNotInTwoArrays(string[] array1, string[] array2)
+        internal static string[] ReturnsValueWhichDoNotInTwoArrays(string[] array1, string[] array2)
         {
             string[] arrayConcat = new string[array1.Length + array2.Length];
 
@@ -138,7 +171,7 @@
                 arrayConcat[array1.Length + i] = array2[i];
             }
 
-            IEnumerable<string> result = arrayConcat.Distinct();
+            string[] result = arrayConcat.Distinct().ToArray();
 
             return result;
         }
@@ -157,22 +190,22 @@
             }
 
             string[] array1 = new string[count];
-            int count2 = arrayToClearWhitespace.Length - (array1.Length + 1);
-            string[] array2 = new string[count2];
-            string[] result = new string[array1.Length + array2.Length];
+            int secondArrayLength = arrayToClearWhitespace.Length - (array1.Length + 1);
+            string[] array2 = new string[secondArrayLength];
+            string[] erasedResult = new string[array1.Length + array2.Length];
 
             for (int i = 0; i < array1.Length; i++)
             {
                 array1[i] = arrayToClearWhitespace[i];
-                result[i] = array1[i];
+                erasedResult[i] = array1[i];
             }
             for (int i = 1; i <= array2.Length; i++)
             {
                 array2[i - 1] = arrayToClearWhitespace[array1.Length + i];
-                result[array1.Length + i - 1] = array2[i - 1];
+                erasedResult[array1.Length + i - 1] = array2[i - 1];
             }
 
-            return result;
+            return erasedResult;
         }
     }
 }

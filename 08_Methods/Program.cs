@@ -5,8 +5,8 @@ internal class Program
     private static void Main(string[] args)
     {
         //TaskNo01.ExerciseForTaskNoOne();
-        //TaskNo01.CheckCharInTwoStrings();
+        TaskNo01.CheckCharInTwoStrings();
 
-        TaskNo02.ExerciseForTaskNoTwo();
+        //TaskNo02.ExerciseForTaskNoTwo();
     }
 }
