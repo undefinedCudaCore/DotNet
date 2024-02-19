@@ -127,11 +127,13 @@
 
         //Returns an array with values that repeats in two given arrays
 
-        internal static void ReturnsValueWhichRepeatsInTwoArrays2(string[] firstArray, string[] secondArray)
+        internal static string[] ReturnsValueWhichRepeatsInTwoArrays2(string[] firstArray, string[] secondArray)
         {
             string[] result = new string[firstArray.Length - 1];
 
+            //Adds 
             int count = 0;
+            int count2 = 0;
             foreach (var firstItem in firstArray)
             {
 
@@ -139,22 +141,42 @@
                 {
                     if (firstItem == secondItem)
                     {
-
                         result[count++] = firstItem;
                         break;
                     }
                 }
             }
 
-            result = result.Distinct().ToArray();
+            //result = result.Distinct().ToArray();
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                string currentElement = result[i];
+
+                for (int j = i + 1; j < result.Length; j++)
+                {
+                    if (result[j] == currentElement)
+                    {
+                        result[j] = null;
+                    }
+                }
+                if (!String.IsNullOrEmpty(result[i]))
+                {
+                    count2++;
+                }
+            }
+
+            string[] result2 = new string[count2];
+            count = 0;
 
             for (int i = 0; i < result.Length; i++)
             {
                 if (!String.IsNullOrEmpty(result[i]))
                 {
-                    Console.WriteLine(result[i]);
+                    result2[count++] = result[i];
                 }
             }
+            return result2;
         }
 
         //Returns an array with values that does not repeat in two given arrays.

@@ -78,10 +78,10 @@
             {
                 checkedEmail = true;
             }
-                //else if ()
-                //{
-                //    dot = true;
-                //}
+            //else if ()
+            //{
+            //    dot = true;
+            //}
             //}
             //if (eta && dot)
             //{
@@ -124,25 +124,43 @@
 
             Console.WriteLine("Enter firs sentens to check similar strings:");
             firstInput = Console.ReadLine();
-            firstInput.ToLower();
+            char[] first = firstInput.ToLower().ToCharArray();
             Console.WriteLine();
 
             Console.WriteLine("Enter firs sentens to check similar strings:");
             secondInput = Console.ReadLine();
-            secondInput.ToLower();
+            char[] second = secondInput.ToLower().ToCharArray();
             Console.WriteLine();
 
+            char[] third = new char[first.Length - 1];
+
+            int count = -1;
             for (var i = 0; i < firstInput.Length; i++)
             {
                 for (var j = 0; j < secondInput.Length; j++)
                 {
-                    if (firstInput[i] == secondInput[j])
+                    if (first[i] == second[j] && first.Contains(first[i]))
                     {
-                        Console.WriteLine(firstInput[i]);
+                        third[++count] = first[i];
+                        //Console.WriteLine(first[i]);
                         break;
                     }
                 }
             }
+
+            for (int i = 0; i < third.Length; i++)
+            {
+                char currentElement = third[i];
+
+                for (int j = i + 1; j < third.Length; j++)
+                {
+                    if (third[j] == currentElement)
+                    {
+                        third[j] = ' ';
+                    }
+                }
+            }
+            Console.WriteLine(new string(third));
         }
     }
 }

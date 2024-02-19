@@ -148,23 +148,19 @@
             //}
 
             ////------------------------------------------------------------------Additional task No 01.
-            string textForFirstArray = "Grace ye and one with but what seemed steel by consecrate " +
-                "parting aye many his aught apart nine sorrow one and other he not him he monks " +
-                "festal thee paphian when childe or misery days only coffined aught albions " +
-                "breast sins bidding amiss than him such condemned the he childe he";
-            string textForSecondArray = "He now satiety and florid atonement not riot sight he muse " +
-                "and one and seraphs his chaste some me what he revellers monks his riot wassailers " +
-                "his womans power ive few ne one was few plain ways talethis his take suffice in " +
-                "smile chaste a the are monks in such sister";
+            string textForFirstArray = "Beyond loved had knew blast saw flaunting a nor and me condemned such " +
+                "harold tear nor one degree known below or worse love he almost true but once his bower where " +
+                "objects sun den know he upon deadly parasites hall had from like of dome albions my land " +
+                "sighed virtues";
+            string textForSecondArray = "Delphis the congealed chaste whilome suits mote feel sore " +
+                "pillared harolds start and been from glee into was from most and the he adversity " +
+                "made spoiled bliss native that bliss hall of had and haply blazon his love his tear " +
+                "nor such scorching degree way nor the many muse bliss";
 
             string[] array1 = textForFirstArray.ToLower().Split(' ');
             string[] array2 = textForSecondArray.ToLower().Split(' ');
 
-            ////IEnumerable<string> returnedValue = TaskNo03.ReturnsValueWhichDoNotInTwoArrays(array1, array2);
-
-            ////string[] returnedValue = TaskNo03.ReturnsValueWhichRepeatsInTwoArrays2(array1, array2);
-
-            //TaskNo03.ReturnsValueWhichRepeatsInTwoArrays2(array1, array2);
+            //string[] returnedValue = TaskNo03.ReturnsValueWhichRepeatsInTwoArrays2(array1, array2);
 
             //foreach (string repeatedWord in returnedValue)
             //{
