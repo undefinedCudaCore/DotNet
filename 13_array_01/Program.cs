@@ -160,21 +160,21 @@
             string[] array1 = textForFirstArray.ToLower().Split(' ');
             string[] array2 = textForSecondArray.ToLower().Split(' ');
 
-            //string[] returnedValue = TaskNo03.ReturnsValueWhichRepeatsInTwoArrays2(array1, array2);
+            string[] returnedValue = TaskNo03.ReturnsValueWhichRepeatsInTwoArrays2(array1, array2);
 
-            //foreach (string repeatedWord in returnedValue)
-            //{
-            //    Console.WriteLine(repeatedWord);
-            //}
+            foreach (string repeatedWord in returnedValue)
+            {
+                Console.WriteLine(repeatedWord);
+            }
 
             ////------------------------------------------------------------------Additional task No 02.
 
             //string[] array1 = textForFirstArray.Split(' ');
             //string[] array2 = textForSecondArray.Split(' ');
 
-            string[] returnedValue = TaskNo03.ReturnsValueWhichDoNotInTwoArrays(array1, array2);
+            string[] returnedValue2 = TaskNo03.ReturnsValueWhichDoNotInTwoArrays(array1, array2);
 
-            foreach (string repeatedWord in returnedValue)
+            foreach (string repeatedWord in returnedValue2)
             {
                 Console.WriteLine(repeatedWord);
             }

@@ -157,7 +157,7 @@
                 {
                     if (result[j] == currentElement)
                     {
-                        result[j] = null;
+                        result[j] = string.Empty;
                     }
                 }
                 if (!String.IsNullOrEmpty(result[i]))
@@ -182,6 +182,9 @@
         //Returns an array with values that does not repeat in two given arrays.
         internal static string[] ReturnsValueWhichDoNotInTwoArrays(string[] array1, string[] array2)
         {
+            int count = 0;
+            int count2 = 0;
+
             string[] arrayConcat = new string[array1.Length + array2.Length];
 
             for (int i = 0; i < array1.Length; i++)
@@ -193,8 +196,35 @@
                 arrayConcat[array1.Length + i] = array2[i];
             }
 
-            string[] result = arrayConcat.Distinct().ToArray();
+            //string[] result = arrayConcat.Distinct().ToArray();
 
+            for (int i = 0; i < arrayConcat.Length; i++)
+            {
+                string currentElement = arrayConcat[i];
+
+                for (int j = i + 1; j < arrayConcat.Length; j++)
+                {
+                    if (arrayConcat[j] == currentElement)
+                    {
+                        arrayConcat[j] = string.Empty;
+                    }
+                }
+                if (!String.IsNullOrEmpty(arrayConcat[i]))
+                {
+                    count2++;
+                }
+            }
+
+            string[] result = new string[count2];
+            count = 0;
+
+            for (int i = 0; i < arrayConcat.Length; i++)
+            {
+                if (!String.IsNullOrEmpty(arrayConcat[i]))
+                {
+                    result[count++] = arrayConcat[i];
+                }
+            }
             return result;
         }
 
