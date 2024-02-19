@@ -57,7 +57,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRefAndOut", "TestRefAnd
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "13_arrays", "13_arrays", "{4AD5FAAD-51AD-4BDE-BA91-76AA2AE6FBE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_array_01", "13_array_01\13_array_01.csproj", "{0AA64586-A530-4BA5-8F78-902CD601E887}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_array_01", "13_array_01\13_array_01.csproj", "{0AA64586-A530-4BA5-8F78-902CD601E887}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14_foreach_Multi_arrays", "14_foreach_Multi_arrays", "{9ED31A22-22D9-422C-8D2A-9A3BDC1648A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_foreach_multidimentional_arrays", "14_foreach_multidimentional_arrays\14_foreach_multidimentional_arrays.csproj", "{AA7FFFF0-D3D4-467E-8B42-6638FFFF95E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_foreach_multidimentional_arraysTests", "14_foreach_multidimentional_arraysTests\14_foreach_multidimentional_arraysTests.csproj", "{CA177C57-E820-491E-A874-33EF5207EAB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +131,14 @@ Global
 		{0AA64586-A530-4BA5-8F78-902CD601E887}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AA64586-A530-4BA5-8F78-902CD601E887}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AA64586-A530-4BA5-8F78-902CD601E887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7FFFF0-D3D4-467E-8B42-6638FFFF95E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7FFFF0-D3D4-467E-8B42-6638FFFF95E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7FFFF0-D3D4-467E-8B42-6638FFFF95E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7FFFF0-D3D4-467E-8B42-6638FFFF95E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA177C57-E820-491E-A874-33EF5207EAB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA177C57-E820-491E-A874-33EF5207EAB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA177C57-E820-491E-A874-33EF5207EAB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA177C57-E820-491E-A874-33EF5207EAB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -145,6 +159,7 @@ Global
 		{0791441F-5795-4C70-B1AF-44375EA92B22} = {CD949DD2-87E4-4BB9-AEAA-5F5E2930B2EA}
 		{5C4C1C94-636F-4A11-ADA0-A2D96CEFCF19} = {E816490B-6DF9-41E5-A59C-BD8AE528DCC7}
 		{0AA64586-A530-4BA5-8F78-902CD601E887} = {4AD5FAAD-51AD-4BDE-BA91-76AA2AE6FBE1}
+		{AA7FFFF0-D3D4-467E-8B42-6638FFFF95E9} = {9ED31A22-22D9-422C-8D2A-9A3BDC1648A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FB7A609C-DB28-41DF-BB8B-EA9BA52C3561}
