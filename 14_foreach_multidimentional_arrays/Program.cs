@@ -43,13 +43,13 @@
 
             //Intro.PrintStrings(strings);
 
-            //-------------------------------------------------------------------Task No 01.5.
-            string[] types = { "Clubs", "Diamonds", "Hearts", "Spades" };
-            string[] cards = { "Ace", "King", "Queen", "Jack", "10" };
+            ////-------------------------------------------------------------------Task No 01.5.
+            //string[] types = { "Clubs", "Diamonds", "Hearts", "Spades" };
+            //string[] cards = { "Ace", "King", "Queen", "Jack", "10" };
 
-            string[,] cardDeck = TaskNo01.ConstructDeck(types, cards);
+            //string[,] cardDeck = TaskNo01.ConstructDeck(cards, types);
 
-            TaskNo01.PrintDeck(cardDeck);
+            //TaskNo01.PrintDeck(cardDeck);
         }
     }
 }

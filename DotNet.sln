@@ -61,9 +61,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_array_01", "13_array_01\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14_foreach_Multi_arrays", "14_foreach_Multi_arrays", "{9ED31A22-22D9-422C-8D2A-9A3BDC1648A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_foreach_multidimentional_arrays", "14_foreach_multidimentional_arrays\14_foreach_multidimentional_arrays.csproj", "{AA7FFFF0-D3D4-467E-8B42-6638FFFF95E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14_foreach_multidimentional_arrays", "14_foreach_multidimentional_arrays\14_foreach_multidimentional_arrays.csproj", "{AA7FFFF0-D3D4-467E-8B42-6638FFFF95E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_foreach_multidimentional_arraysTests", "14_foreach_multidimentional_arraysTests\14_foreach_multidimentional_arraysTests.csproj", "{CA177C57-E820-491E-A874-33EF5207EAB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14_foreach_multidimentional_arraysTests", "14_foreach_multidimentional_arraysTests\14_foreach_multidimentional_arraysTests.csproj", "{CA177C57-E820-491E-A874-33EF5207EAB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "15_multidimentional_arrays", "15_multidimentional_arrays", "{9D8CE07E-52D8-4F90-96E5-DE1E5AA7B79B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_multi_arrays", "15_multi_arrays\15_multi_arrays.csproj", "{D4AB1185-F33A-4E6B-A12E-64016B8CFE31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,6 +143,10 @@ Global
 		{CA177C57-E820-491E-A874-33EF5207EAB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA177C57-E820-491E-A874-33EF5207EAB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA177C57-E820-491E-A874-33EF5207EAB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4AB1185-F33A-4E6B-A12E-64016B8CFE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AB1185-F33A-4E6B-A12E-64016B8CFE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AB1185-F33A-4E6B-A12E-64016B8CFE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AB1185-F33A-4E6B-A12E-64016B8CFE31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +168,7 @@ Global
 		{5C4C1C94-636F-4A11-ADA0-A2D96CEFCF19} = {E816490B-6DF9-41E5-A59C-BD8AE528DCC7}
 		{0AA64586-A530-4BA5-8F78-902CD601E887} = {4AD5FAAD-51AD-4BDE-BA91-76AA2AE6FBE1}
 		{AA7FFFF0-D3D4-467E-8B42-6638FFFF95E9} = {9ED31A22-22D9-422C-8D2A-9A3BDC1648A8}
+		{D4AB1185-F33A-4E6B-A12E-64016B8CFE31} = {9D8CE07E-52D8-4F90-96E5-DE1E5AA7B79B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FB7A609C-DB28-41DF-BB8B-EA9BA52C3561}

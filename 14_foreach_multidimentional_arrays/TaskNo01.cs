@@ -82,15 +82,15 @@
             return words2;
         }
 
-        public static string[,] ConstructDeck(string[] types, string[] cards)
+        public static string[,] ConstructDeck(string[] cards, string[] types)
         {
-            string[,] deck = new string[types.Length, cards.Length];
+            string[,] deck = new string[cards.Length, types.Length];
 
-            for (int i = 0; i < types.Length; i++)
+            for (int i = 0; i < deck.GetLength(0); i++)
             {
-                for (int j = 0; j < cards.Length; j++)
+                deck[0, i] = types[i];
+                for (int j = 0; j < deck.GetLength(1); j++)
                 {
-                    deck[i, j] = types[i] + " " + cards[j];
                 }
             }
             return deck;
@@ -98,15 +98,13 @@
 
         public static void PrintDeck(string[,] deck)
         {
-            Console.WriteLine("-------------------");
-
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < deck.GetLength(0); i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < deck.GetLength(1); j++)
                 {
-                    Console.WriteLine(deck[i, j]);
+                    Console.Write(deck[i, j].PadRight(10));
                 }
-                Console.WriteLine("-------------------");
+                Console.WriteLine();
             }
         }
     }

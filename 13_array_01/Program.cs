@@ -6,7 +6,7 @@
         {
             //Intro.ArrayIntro();
 
-            int[] arrayWithInitialValues = { 1, 2, 3, 55, 5, 6, 7, 8, 9, 10 };
+            //int[] arrayWithInitialValues = { 1, 2, 3, 55, 5, 6, 7, 8, 9, 10 };
 
             //------------------------------------------------------------------Task NO 01.1.
 
@@ -87,17 +87,17 @@
             //Console.WriteLine(returnedFirstLetterOfEachWord);
 
 
-            ////------------------------------------------------------------------Taks NO 03.1.
-            //int[] newInts = { 2, 3, 4, 8, 7, 6, 10, 9, 15, 14, 13, 1 };
+            //////------------------------------------------------------------------Taks NO 03.1.
+            //int[] newInts = { 2, 3, 4, 8, 7, 6, 10, 9, 15, 10, 14, 13, 1, 1 };
 
-            //int[] sortedInts = TaskNo03.FromLowToHighValue(newInts);
+            ////int[] sortedInts = TaskNo03.FromLowToHighValue(newInts);
 
-            //for (int i = 0; i < newInts.Length; i++)
-            //{
-            //    Console.WriteLine(sortedInts[i]);
-            //}
+            ////for (int i = 0; i < newInts.Length; i++)
+            ////{
+            ////    Console.WriteLine(sortedInts[i]);
+            ////}
 
-            ////------------------------------------------------------------------Taks NO 03.2.
+            //////////------------------------------------------------------------------Taks NO 03.2.
             //int[] sortedInts2 = TaskNo03.FromHighToLowValue(newInts);
 
             //for (int i = 0; i < newInts.Length; i++)
@@ -172,12 +172,12 @@
             //string[] array1 = textForFirstArray.Split(' ');
             //string[] array2 = textForSecondArray.Split(' ');
 
-            string[] returnedValue2 = TaskNo03.ReturnsValueWhichDoNotInTwoArrays(array1, array2);
+            //string[] returnedValue2 = TaskNo03.ReturnsValueWhichDoNotInTwoArrays(array1, array2);
 
-            foreach (string repeatedWord in returnedValue2)
-            {
-                Console.WriteLine(repeatedWord);
-            }
+            //foreach (string repeatedWord in returnedValue2)
+            //{
+            //    Console.WriteLine(repeatedWord);
+            //}
         }
     }
 }

@@ -30,9 +30,9 @@
 
             for (int i = 0; i < ints.Length; i++)
             {
-                for (int j = i; j < ints.Length; j++)
+                for (int j = 0; j < ints.Length; j++)
                 {
-                    if (ints[i] < ints[j])
+                    if (ints[i] > ints[j])
                     {
                         temporaryValue = ints[i];
                         ints[i] = ints[j];
@@ -136,7 +136,6 @@
             int count2 = 0;
             foreach (var firstItem in firstArray)
             {
-
                 foreach (var secondItem in secondArray)
                 {
                     if (firstItem == secondItem)
