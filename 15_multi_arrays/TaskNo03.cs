@@ -90,7 +90,7 @@
                     }
                     else
                     {
-                        break;
+                        return animalOptions;
                     }
 
                     if (count2 == 4 || count2 % 4 == 0)
