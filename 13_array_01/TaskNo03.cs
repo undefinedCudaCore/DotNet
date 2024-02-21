@@ -76,7 +76,6 @@
                 result[array1.Length + i] = array2[i - 1];
             }
 
-
             return result;
         }
 

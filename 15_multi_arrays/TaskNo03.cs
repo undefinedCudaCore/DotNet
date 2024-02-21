@@ -121,6 +121,7 @@
             {
                 Console.WriteLine($"Entered bad information.");
             }
+            Console.ReadLine();
         }
     }
 }
