@@ -123,5 +123,39 @@
             }
             Console.ReadLine();
         }
+
+        public static void MultiDimentionalArrayStarPrint()
+        {
+            char[,] array = new char[4, 4];
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (array[0, 0] != ' ' && array[0, 3] != ' ')
+                    {
+                        array[0, 0] = ' ';
+                        array[0, 3] = ' ';
+                    }
+
+                    array[i, j] = '*';
+
+                    if (array[3, 0] != ' ' && array[3, 3] != ' ')
+                    {
+                        array[3, 0] = ' ';
+                        array[3, 3] = ' ';
+                    }
+                }
+            }
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write(array[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }

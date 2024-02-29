@@ -57,24 +57,27 @@
             //TaskNo03.MultidimArrayMaxValue(values);
 
             // -------------------------------------------- Tasko NO 03.2.
-            int[,] numbers2 = {
-                    { 4, 2, 3, 2, 2 },
-                    { 3, 6, 2, 2, 2 },
-                    { 3, 6, 2, 2, 2 },
-                    { 2, 2, 2, 2, 2 },
-                    { 3, 6, 2, 2, 5 }
-                };
+            //int[,] numbers2 = {
+            //        { 4, 2, 3, 2, 2 },
+            //        { 3, 6, 2, 2, 2 },
+            //        { 3, 6, 2, 2, 2 },
+            //        { 2, 2, 2, 2, 2 },
+            //        { 3, 6, 2, 2, 5 }
+            //    };
 
             // array which returns true:
-            int[,] array = {
-                    {1, 2, 1},
-                    {4, 5, 4},
-                    {1, 2, 1}
-                };
+            //int[,] array = {
+            //        {1, 2, 1},
+            //        {4, 5, 4},
+            //        {1, 2, 1}
+            //    };
 
-            // -------------------------------------------- Tasko NO 03.3.
-            string[,] pets = TaskNo03.GetAnimalOptions(2);
-            TaskNo03.PrintMultiDimnentionalStringArray(pets);
+            //// -------------------------------------------- Tasko NO 03.3.
+            //string[,] pets = TaskNo03.GetAnimalOptions(2);
+            //TaskNo03.PrintMultiDimnentionalStringArray(pets);
+
+            //// -------------------------------------------- Tasko NO 03.4.
+            //TaskNo03.MultiDimentionalArrayStarPrint();
         }
     }
 }

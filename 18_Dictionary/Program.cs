@@ -28,16 +28,29 @@
             //TaskNo01.PrintFruits(returnedListOfFruitsToPrint);
 
             // -------------------------- 01.4.
-            Console.WriteLine("Enter student name: ");
-            string name = Console.ReadLine();
+            //Console.WriteLine("Enter student name: ");
+            //string name = Console.ReadLine();
 
-            if (!String.IsNullOrEmpty(name))
+            //if (!String.IsNullOrEmpty(name))
+            //{
+            //    Dictionary<string, List<int>> keyValuePairs = TaskNo01.GetStudentGrades(name);
+            //    TaskNo01.PrintGrade(keyValuePairs, name);
+            //}
+
+            List<int> randomIndex = new List<int>();
+            Random random = new Random();
+
+            for (int i = 0; i < 100; i++)
             {
-                Dictionary<string, List<int>> keyValuePairs = TaskNo01.GetStudentGrades(name);
-                TaskNo01.PrintGrade(keyValuePairs, name);
+                randomIndex.Add(random.Next(0, 4));
             }
+            randomIndex = randomIndex.ToArray().Distinct().ToList();
 
 
+            foreach (var item in randomIndex)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
