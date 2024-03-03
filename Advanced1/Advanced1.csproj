@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\Programming\.NET\DotNet\Advanced1\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Programming\.NET\DotNet\Advanced1\.editorconfig" />
+  </ItemGroup>
+
 </Project>
