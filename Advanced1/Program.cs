@@ -55,20 +55,104 @@ internal class Program
 
         //Exercise 2.4. ---------------
 
-        List<string> items1 = new List<string>() { "Orange", "Cucumber", "Banana" };
-        List<string> items2 = new List<string>() { "Coke", "Sprite", "Mirinda" };
+        //List<string> items1 = new List<string>() { "Orange", "Cucumber", "Banana" };
+        //List<string> items2 = new List<string>() { "Coke", "Sprite", "Mirinda" };
 
-        Store firstStore = new Store(items1);
-        Store secondStore = new Store(items2);
-        Store thirdStore = new Store();
+        //Store firstStore = new Store(items1);
+        //Store secondStore = new Store(items2);
+        //Store thirdStore = new Store();
 
-        firstStore.Name = "Maxima";
-        secondStore.Name = "Lidl";
-        thirdStore.Name = "Rimi";
+        //firstStore.Name = "Maxima";
+        //secondStore.Name = "Lidl";
+        //thirdStore.Name = "Rimi";
 
-        List<string> items3 = Store.ReturnItemList();
+        //List<string> items3 = Store.ReturnItemList();
 
-        Store.Print(firstStore.Name, items3);
-        Store.Print(secondStore.Name, items3);
+        //Store.Print(firstStore.Name, items3);
+        //Store.Print(secondStore.Name, items3);
+
+
+        //Exercise 3.1. ---------------
+
+        PetColor brown = new PetColor();
+        brown.Color = "Brown";
+
+        PetColor yellow = new PetColor();
+        yellow.Color = "Yellow";
+
+        PetColor green = new PetColor();
+        green.Color = "Green";
+
+        PetName dogName = new PetName();
+        dogName.Name = "Squeezi";
+
+        PetName catName = new PetName();
+        catName.Name = "Whitee";
+
+        PetName hamsterName = new PetName();
+        hamsterName.Name = "Hamsti";
+
+        PetWeight dogWeight = new PetWeight();
+        dogWeight.Weight = 20;
+
+        PetWeight catgWeight = new PetWeight();
+        catgWeight.Weight = 10;
+
+        PetWeight hamsterWeight = new PetWeight();
+        hamsterWeight.Weight = 0.2;
+
+        Dog dog = new Dog(dogName, dogWeight, brown);
+        Cat cat = new Cat(catName, catgWeight, yellow);
+        Hamster hamster = new Hamster(hamsterName, hamsterWeight, green);
+
+        //PrintNames(dog, cat, hamster);
+
+        //Exercise 3.2. ---------------
+
+        List<Dog> dogs = new List<Dog>();
+        List<Cat> cats = new List<Cat>();
+        List<Hamster> hamsters = new List<Hamster>();
+
+        dogs.Add(dog);
+        dogs.Add(dog);
+        dogs.Add(dog);
+        dogs.Add(dog);
+        dogs.Add(dog);
+        dogs.Add(dog);
+
+        cats.Add(cat);
+        cats.Add(cat);
+        cats.Add(cat);
+
+        hamsters.Add(hamster);
+        hamsters.Add(hamster);
+        hamsters.Add(hamster);
+        hamsters.Add(hamster);
+        hamsters.Add(hamster);
+        hamsters.Add(hamster);
+
+        //PetNameAntQtyDictionary(dogs, cats, hamsters);
+
+        //Exercise 3.3. ---------------
+    }
+
+    //Exercise 3.1. ---------------
+    public static void PrintNames(Dog dog, Cat cat, Hamster hamster)
+    {
+        Console.WriteLine(dog.DogName.Name);
+        Console.WriteLine(cat.CatName.Name);
+        Console.WriteLine(hamster.HamsterName.Name);
+    }
+
+    //Exercise 3.2. ---------------
+    public static Dictionary<string, int> PetNameAntQtyDictionary(List<Dog> dogs, List<Cat> cats, List<Hamster> hamsters)
+    {
+        Dictionary<string, int> petNameAntQty = new Dictionary<string, int>();
+
+        petNameAntQty.Add("Dog", dogs.Count);
+        petNameAntQty.Add("Cat", cats.Count);
+        petNameAntQty.Add("Hamster", hamsters.Count);
+
+        return petNameAntQty;
     }
 }
