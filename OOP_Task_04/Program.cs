@@ -1,4 +1,5 @@
-﻿using OOP_Task_04.Cars;
+﻿using OOP_Task_04.BankAndAccount;
+using OOP_Task_04.Cars;
 using OOP_Task_04.Person;
 
 namespace OOP_Task_04
@@ -33,7 +34,23 @@ namespace OOP_Task_04
             person1.MyAddress.City = "Kaunas";
             person1.MyAddress.Street = "Kauno g. 12";
 
-            Console.WriteLine($"My name is {person1.Name}, I'm {person1.Age} years old. I am living in city called {person1.MyAddress.City} on {person1.MyAddress.Street} street.");
+            //Console.WriteLine($"My name is {person1.Name}, " +
+            //    $"I'm {person1.Age} years old. I am living in city called " +
+            //    $"{person1.MyAddress.City} on {person1.MyAddress.Street} street.");
+
+            //Exercise 4.3.------------------------
+            Bank swedbank = new Bank();
+
+            OpenBankAccount(swedbank, "Arvydas  Sabonis", 50000.98);
+            OpenBankAccount(swedbank, "Tomas Leilas", 60000.98);
+            OpenBankAccount(swedbank, "Virginijus Vilkas", 59990.98);
+
+            foreach (var account in swedbank.Accounts)
+            {
+                Console.WriteLine(account.AccountHolder + " " + account.Balance);
+            }
+
+
         }
 
         //Exercise 4.1.------------------------
@@ -42,6 +59,17 @@ namespace OOP_Task_04
             Console.WriteLine(car.Make);
             Console.WriteLine(car.Model);
             Console.WriteLine("Engine is " + car.Engine.EngineIsOn);
+        }
+
+        //Exercise 4.3.------------------------
+        public static Bank OpenBankAccount(Bank bank, string bankHoldersName, double balance)
+        {
+            Account account = new Account();
+            account.AccountHolder = bankHoldersName;
+            account.Balance = balance;
+            bank.Accounts.Add(account);
+
+            return bank;
         }
     }
 }
