@@ -42,15 +42,32 @@
 
             //library.GetBooksPrinted();
 
-            Console.WriteLine("--------------------");
+            //Console.WriteLine("--------------------");
             Book bookToRemove = new Book("The book title");
 
             library.RemoveBook(bookToRemove);
 
             //library.GetBooksPrinted();
 
-            //Exercise NO 04--------------------
+            //Exercise NO 05--------------------
 
+            Playlist playlist = new Playlist();
+
+            playlist.AddSong(new Song("Beatles", "Yesturday"));
+            playlist.AddSong(new Song("This", "Bad song"));
+            playlist.AddSong(new Song("Beatles", "Saturday"));
+            playlist.AddSong(new Song("This", "Bad song"));
+            playlist.AddSong(new Song("Rytis Cicinas", "Love ship"));
+            playlist.AddSong(new Song("This", "Bad song"));
+
+            playlist.GetSongsPrinted();
+
+            Console.WriteLine("--------------------");
+            Song songToRemove = new Song("This", "Bad song");
+
+            playlist.RemoveSong(songToRemove);
+
+            playlist.GetSongsPrinted();
         }
     }
 }

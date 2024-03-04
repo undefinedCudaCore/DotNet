@@ -9,7 +9,7 @@
         }
 
         //List<string> Books;
-        List<Book> Books;
+        List<Book> Books { get; set; }
 
         public List<Book> AddBook(Book bookTitle)
         {
