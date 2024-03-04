@@ -60,14 +60,24 @@
             playlist.AddSong(new Song("Rytis Cicinas", "Love ship"));
             playlist.AddSong(new Song("This", "Bad song"));
 
-            playlist.GetSongsPrinted();
+            //playlist.GetSongsPrinted();
 
-            Console.WriteLine("--------------------");
+            //Console.WriteLine("--------------------");
             Song songToRemove = new Song("This", "Bad song");
 
             playlist.RemoveSong(songToRemove);
 
-            playlist.GetSongsPrinted();
+            //playlist.GetSongsPrinted();
+
+            //Exercise NO 06--------------------
+            Netflix netflix = new Netflix();
+
+            netflix.AddMovie(new Movie("Terminator", "Action", 10));
+            netflix.AddMovie(new Movie("Terminator2", "Action", 8));
+            netflix.AddMovie(new Movie("Do you love me", "Action", 6));
+            netflix.AddMovie(new Movie("Jocker", "Action", 2));
+
+            netflix.PrintMovieWithGoodRating();
         }
     }
 }
