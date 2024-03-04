@@ -33,19 +33,19 @@
             //Exercise NO 04--------------------
             Library library = new Library();
 
-            library.AddBook(new Book("The book title"));
-            library.AddBook(new Book("The Unbearable Lightness of Being"));
-            library.AddBook(new Book("The book title"));
-            library.AddBook(new Book("The Hollow Chocolate Bunnies of the Apocalypse"));
-            library.AddBook(new Book("The book title"));
-            library.AddBook(new Book("Are You There, Vodka? It's Me, Chelsea"));
+            //library.AddBook(new Book("The book title"));
+            //library.AddBook(new Book("The Unbearable Lightness of Being"));
+            //library.AddBook(new Book("The book title"));
+            //library.AddBook(new Book("The Hollow Chocolate Bunnies of the Apocalypse"));
+            //library.AddBook(new Book("The book title"));
+            //library.AddBook(new Book("Are You There, Vodka? It's Me, Chelsea"));
 
             //library.GetBooksPrinted();
 
             //Console.WriteLine("--------------------");
-            Book bookToRemove = new Book("The book title");
+            //Book bookToRemove = new Book("The book title");
 
-            library.RemoveBook(bookToRemove);
+            //library.RemoveBook(bookToRemove);
 
             //library.GetBooksPrinted();
 
@@ -77,7 +77,17 @@
             netflix.AddMovie(new Movie("Do you love me", "Action", 6));
             netflix.AddMovie(new Movie("Jocker", "Action", 2));
 
-            netflix.PrintMovieWithGoodRating();
+            //netflix.PrintMovieWithGoodRating();
+
+            //Exercise NO 07--------------------
+
+            Book firstBook = new Book("The Unbearable Lightness of Being", "firstAuthor", 658);
+            Book secondBook = new Book("The Hollow Chocolate Bunnies of the Apocalypse", "secondAuthor", 48);
+            Book thirdBook = new Book("The Hollow Chocolate Bunnies of the Apocalypse 2", "secondAuthor", 168);
+
+            firstBook.PrintHowLongReadBook();
+            secondBook.PrintHowLongReadBook();
+            thirdBook.PrintHowLongReadBook();
         }
     }
 }
