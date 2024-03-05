@@ -21,14 +21,15 @@
 
         public void PrintProgrammersInformationOfOneManager()
         {
-            for (int i = 0; i < EmployeeList.Count; i++)
+            foreach (var employee in EmployeeList)
             {
-                if (EmployeeList[i] is Programmer)
+                if (employee is Programmer)
                 {
+                    Programmer emp = employee as Programmer;
 
-                    Console.Write(EmployeeList[i].Name + "\t");
-                    Console.Write(EmployeeList[i].Salary + "\t");
-                    //Console.Write(EmployeeList[i].ProgrammingLanguage + "\n");
+                    Console.Write(emp.Name + "\t");
+                    Console.Write(emp.Salary + "\t");
+                    Console.Write(emp.ProgrammingLanguage + "\n");
                 }
             }
             Console.WriteLine(EmployeeList.Count);
