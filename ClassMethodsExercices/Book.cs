@@ -28,6 +28,19 @@
                 return double.NaN;
             }
         }
+        private DateTime CountWhenBoookWillBeReaded()
+        {
+            double timeToRead = 0;
+            if (Pages > 50)
+            {
+                timeToRead = Math.Round((double)Pages / 50, 2);
+            }
+            else
+            {
+                timeToRead = -1;
+            }
+            return DateTime.Now.AddHours(timeToRead);
+        }
 
         public void PrintHowLongReadBook()
         {
@@ -35,12 +48,15 @@
 
             if (double.IsNaN(count))
             {
-                Console.WriteLine("You will read this book in less than an hour.");
+                Console.Write("You will read this book in less than an hour.");
+                Console.WriteLine(CountWhenBoookWillBeReaded() + ".");
             }
             else
             {
-                Console.WriteLine($"You will read this book in {count} hour.");
+                Console.Write($"You will read this book in {count} hour, or on ");
+                Console.WriteLine(CountWhenBoookWillBeReaded() + ".");
             }
+
         }
     }
 }
