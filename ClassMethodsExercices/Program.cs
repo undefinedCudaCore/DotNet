@@ -85,9 +85,23 @@
             Book secondBook = new Book("The Hollow Chocolate Bunnies of the Apocalypse", "secondAuthor", 48);
             Book thirdBook = new Book("The Hollow Chocolate Bunnies of the Apocalypse 2", "secondAuthor", 168);
 
-            firstBook.PrintHowLongReadBook();
-            secondBook.PrintHowLongReadBook();
-            thirdBook.PrintHowLongReadBook();
+            //firstBook.PrintHowLongReadBook();
+            //secondBook.PrintHowLongReadBook();
+            //thirdBook.PrintHowLongReadBook();
+
+            //Exercise NO 08--------------------
+            WinProgram photoshop = new WinProgram(8, "PhotoShop");
+            WinProgram calculator = new WinProgram(0.1, "Calculator");
+            WinProgram visualStudio = new WinProgram(20, "Visual Studio");
+            WinProgram xampp = new WinProgram(10, "Xampp");
+
+            Computer ibm = new Computer("586", 10, "1000GB");
+            ibm.AddProgram(photoshop);
+            ibm.AddProgram(calculator);
+            ibm.AddProgram(visualStudio);
+            ibm.AddProgram(xampp);
+
+            ibm.PrintIsComputerAbleToOpenProgram();
         }
     }
 }
