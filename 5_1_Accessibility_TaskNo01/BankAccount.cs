@@ -6,14 +6,20 @@
         {
 
         }
-        private double _balance;
-
-        internal double GetTotalBalance()
+        protected double _balance;
+        public double MyProperty
         {
-            return _balance;
+            get { return _balance; }
+            set { _balance = value; }
         }
 
-        internal double SetBalance(double balance)
+
+        private double GetTotalBalance()
+        {
+            return Math.Round(_balance, 2);
+        }
+
+        public double SetBalance(double balance)
         {
             return _balance += balance;
         }

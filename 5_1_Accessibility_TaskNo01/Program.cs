@@ -24,10 +24,23 @@
             bankAccount.SetBalance(5.25);
             bankAccount.SetBalance(5.25);
             bankAccount.SetBalance(5.25);
-            bankAccount.SetBalance(5.25);
+            bankAccount.SetBalance(505.25);
 
             bankAccount.UsePrinMethod();
 
+            //Exercise 4 -------------------------------
+            SavingsAccount savings = new SavingsAccount();
+
+            savings.SetBalance(100);
+            savings.CalculateInterest(10);
+
+            //savings.UsePrinMethod();
+
+            //Exercise 5 -------------------------------
+            CheckingAccount check = new CheckingAccount(bankAccount);
+            check.Withdraw(100, bankAccount);
+            Console.Write("Balance after withdraw:");
+            bankAccount.UsePrinMethod();
         }
     }
 }
