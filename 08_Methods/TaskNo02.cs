@@ -10,7 +10,7 @@
             bool parsedNumber = int.TryParse(Console.ReadLine(), out enteredNuber);
 
             //Console.WriteLine($"Your faktorial is: {ClaculateFactorial(enteredNuber)}");
-            CalculateUsingIteration(enteredNuber);
+            Console.WriteLine(CalculateUsingIteration(enteredNuber));
         }
 
         internal static int ClaculateFactorial(int number)
@@ -24,17 +24,14 @@
 
         public static int CalculateUsingIteration(int number)
         {
-            int a = 0, b = 1, temp;
-
-            for (int i = 0; i < number; i++)
+            if(number <= 2)
             {
-                temp = a;
-                a = b;
-                b = temp + b;
-                Console.WriteLine(b);
+                return 1;
             }
-
-            return a;
+            else
+            {
+                return CalculateUsingIteration(number - 1) + CalculateUsingIteration(number - 2);
+            }
         }
     }
 }
