@@ -6,7 +6,6 @@
         {
             Size = size;
             _index = 0;
-            _actualSize = size;
             Array = new T[Size];
         }
 
@@ -20,21 +19,30 @@
         {
             if (IsListEmpty())
             {
-                Array = MakeArraqyBigger();
+                Array = MakeArrayBigger();
             }
             Array[_index++] = tttt;
         }
 
+        public void RemoveArrayItem(int index)
+        {
+            //List<T> list = new List<T>();
+            //list = Array2.ToList();
+            //list.Remove(list[index]);
+
+            //Array2 = list.ToArray();
+        }
+
         private bool IsListEmpty()
         {
-            if (Array.Length >= _actualSize)
+            if (Array.Length >= Size)
             {
                 return true;
             }
             return false;
         }
 
-        private T[] MakeArraqyBigger()
+        private T[] MakeArrayBigger()
         {
             Array2 = new T[Size++];
             Array.CopyTo(Array2, 0);
