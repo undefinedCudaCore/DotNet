@@ -5,27 +5,40 @@
         public CustomList(int size)
         {
             Size = size;
-            _index = 0;
             Array = new T[Size];
         }
 
         public T[] Array { get; set; }
         public T[] Array2 { get; set; }
         private int Size { get; set; }
-        private int _index;
-        private int _actualSize { get; set; }
+        private int _index = 0;
 
-        public void AddToArray(T tttt)
+        public void AddToArray(T arrayElementToAdd)
         {
-            if (IsListEmpty())
+            if (IsListFull())
             {
                 Array = MakeArrayBigger();
             }
-            Array[_index++] = tttt;
+            Array[_index] = arrayElementToAdd;
+            _index++;
         }
 
         public void RemoveArrayItem(int index)
         {
+            var newArray = new T[Array2.Length - 1];
+
+            for (int i = 0; i < index; i++)
+            {
+                newArray[i] = Array2[i];
+            }
+            for (int i = index + 1; i < newArray.Length; i++)
+            {
+                newArray[index++] = Array2[i];
+
+            }
+
+            Array2 = newArray;
+
             //List<T> list = new List<T>();
             //list = Array2.ToList();
             //list.Remove(list[index]);
@@ -34,9 +47,9 @@
             //Array2 = list.ToArray();
         }
 
-        private bool IsListEmpty()
+        private bool IsListFull()
         {
-            if (Array.Length >= Size)
+            if (_index == Size)
             {
                 return true;
             }
@@ -45,7 +58,8 @@
 
         private T[] MakeArrayBigger()
         {
-            Array2 = new T[Size++];
+            Size += (Size / 2);
+            Array2 = new T[Size];
             Array.CopyTo(Array2, 0);
 
             return Array2;
