@@ -159,7 +159,7 @@ namespace _6_1_Streams
         {
             string path = Environment.CurrentDirectory + "\\Data\\Data.dat";
 
-            Stream stream = new MemoryStream(55);
+            //Stream stream = new MemoryStream(55);
 
             //using (BinaryWriter bw = new BinaryWriter(stream))
             //{
