@@ -30,6 +30,7 @@
             //list = Array2.ToList();
             //list.Remove(list[index]);
 
+
             //Array2 = list.ToArray();
         }
 
