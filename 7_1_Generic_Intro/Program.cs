@@ -20,8 +20,20 @@
             cl.AddToArray(118);
             cl.AddToArray(118);
 
-            cl.RemoveArrayItem(1);
-            cl.RemoveArrayItem(5);
+            cl.RemoveArrayItem(88);
+            cl.RemoveArrayItem(118888);
+            cl.RemoveArrayItem(118);
+            cl.RemoveArrayItem(118);
+            cl.RemoveArrayItem(118);
+            cl.RemoveArrayItem(118);
+            cl.RemoveArrayItem(118);
+            cl.RemoveArrayItem(118);
+            cl.RemoveArrayItem(0);
+            cl.RemoveArrayItem(0);
+            cl.RemoveArrayItem(0);
+            cl.RemoveArrayItem(0);
+            cl.RemoveArrayItem(110);
+            cl.RemoveArrayItem(89);
 
 
 

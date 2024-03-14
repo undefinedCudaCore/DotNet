@@ -1,6 +1,6 @@
 ﻿namespace _7_1_Generic_Intro
 {
-    internal class CustomList<T>
+    public class CustomList<T>
     {
         public CustomList(int size)
         {
@@ -23,18 +23,29 @@
             _index++;
         }
 
-        public void RemoveArrayItem(int index)
+        public void RemoveArrayItem(T elementToRemove)
         {
             var newArray = new T[Array2.Length - 1];
 
-            for (int i = 0; i < index; i++)
-            {
-                newArray[i] = Array2[i];
-            }
-            for (int i = index + 1; i < newArray.Length; i++)
-            {
-                newArray[index++] = Array2[i];
+            //for (int i = 0; i < index; i++)
+            //{
+            //    newArray[i] = Array2[i];
+            //}
+            //for (int i = index + 1; i < newArray.Length; i++)
+            //{
+            //    newArray[index++] = Array2[i];
 
+            //}
+            int count = 0;
+            for (int i = 0; i < Array2.Length - 1; i++)
+            {
+                if (Array2[i].Equals(elementToRemove))
+                {
+                    count = i + 1;
+                    newArray[i] = Array2[count];
+                }
+                newArray[i] = Array2[count];
+                count++;
             }
 
             Array2 = newArray;
