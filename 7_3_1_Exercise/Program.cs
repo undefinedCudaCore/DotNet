@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            //var newCityListNull = new Dictionary<int, string>(0, null);
+            //int? a = null;
+            //var newCityListNull = new Dictionary<string, string>(null, null);
 
             var newCityList = new Dictionary<int, string>(){
                 {0, "London"},

@@ -12,15 +12,14 @@
 
         public static bool Validate(T value)
         {
-            string type = "System.Collections.Generic.Dictionary`2[System.Int32,System.String]";
 
-            if (value == null)
+            //if (value == null)
+            //{
+            //    return true;
+            //}
+            if (default(T) == null)
             {
-                return true;
-            }
-            if (value.GetType().ToString() == type)
-            {
-                return true;
+                return value == null;
             }
 
             return false;
