@@ -7,7 +7,7 @@
             return intToCheck > myInt;
         }
 
-        public static string CreateEmail(this string email, string fullname, int yearOfBirth, string domain)
+        public static string CreateEmail(this string fullname, int yearOfBirth, string domain)
         {
             string[] splitedName = fullname.Split(" ");
             fullname = "";

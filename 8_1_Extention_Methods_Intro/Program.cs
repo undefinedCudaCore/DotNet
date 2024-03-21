@@ -8,8 +8,8 @@ namespace _8_1_Extention_Methods_Intro
 
             //Console.WriteLine(5.CheckIsParameterIntIsBigger(6));
 
-            //string johnsEmail = "";
-            //Console.WriteLine(johnsEmail.CreateEmail("Jonh Byte John Snow", 18, "google.com"));
+            string john = "Jonh Byte John Snow";
+            //Console.WriteLine(john.CreateEmail(18, "google.com"));
 
             List<string> list = new List<string>()
             {
@@ -31,7 +31,7 @@ namespace _8_1_Extention_Methods_Intro
             //}
 
             string path = Environment.CurrentDirectory + "\\extentions2.txt";
-            path.WriteToFileEveryOtherWord();
+            //path.WriteToFileEveryOtherWord();
         }
     }
 }
