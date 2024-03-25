@@ -28,12 +28,12 @@
                 Console.WriteLine(item);
             }
 
-            MyGeneric<int> delType = delegate (int value)
+            MyGeneric<char> delType = delegate (char value)
             {
                 return value.GetType().ToString();
             };
 
-            Console.WriteLine(delType(5));
+            Console.WriteLine(delType('5'));
         }
     }
 }
