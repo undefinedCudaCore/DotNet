@@ -13,22 +13,22 @@ namespace _011_Linq_and_Lambda_exercises
 
             //Exercise 1.2
 
-            List<int> negativeAndPositiveNumbers = new List<int>() { 888, 45, 1, -2, 2, -3, 4, 8, -79, -22, 42, 2, 2, 3, 4, 8 };
+            List<int> negativeAndPositiveNumbers = new List<int>() { 999, 888, 45, 1, -2, 2, -3, 4, 8, -79, -22, 42, 2, 2, 3, 4, 8 };
             List<int> negativeAndPositiveNumbers2 = negativeAndPositiveNumbers.Where(x => x > 0).ToList();
 
             //Exercise 1.3
 
-            List<int> negativeAndPositiveNumbers3 = new List<int>() { 888, 45, 1, -2, 2, -3, 4, 8, -79, -22, 42, 2, 2, 3, 4, 8 };
-            List<int> negativeAndPositiveNumbers4 = negativeAndPositiveNumbers3.Where(x => x < 10).ToList();
+            List<int> negativeAndPositiveNumbersList = new List<int>() { 888, 45, 1, -2, 2, -3, 4, 8, -79, -22, 42, 2, 2, 3, 4, 8 };
+            List<int> getPositiveNumbers = negativeAndPositiveNumbersList.Where(x => x < 10).ToList();
 
             //Exercise 1.4
 
-            negativeAndPositiveNumbers2 = negativeAndPositiveNumbers2.OrderBy(x => x).ToList();
+            var sortNumberListAscending = negativeAndPositiveNumbers2.OrderBy(x => x).ToList();
 
 
             //Exercise 1.5
 
-            negativeAndPositiveNumbers2 = negativeAndPositiveNumbers2.OrderByDescending(x => x).ToList();
+            var sortNumberListDescending = negativeAndPositiveNumbers2.OrderByDescending(x => x).ToList();
 
             //Exercise 1.6
 
@@ -91,7 +91,7 @@ namespace _011_Linq_and_Lambda_exercises
                     Pets = new List<Pet>()
                     {
                         new Pet { PetName = "Tom"},
-                        new Pet { PetName = "A Spike", PetAge = 5},
+                        new Pet { PetName = "a Spike", PetAge = 5},
                         new Pet { PetName = "Junglee"},
                     }
                 },
@@ -99,9 +99,9 @@ namespace _011_Linq_and_Lambda_exercises
 
             List<Pet> petList = personList.SelectMany(x => x.Pets).ToList();
             var petListWherePetNameStartWithA = personList.Select(x => x.Pets.Where(y => y.PetName.StartsWith("A"))).ToList();
-            var petListWherePetNameStartWithA2 = personList.SelectMany(x => x.Pets.Where(y => y.PetName.StartsWith("A"))).ToList();
+            var petListWherePetNameStartWithA2 = personList.SelectMany(x => x.Pets.Where(y => y.PetName.ToLower().StartsWith("a"))).ToList();
 
-            var petListOfPetNameStartWithA = personList.SelectMany(x => x.Pets.Where(y => y.PetName.StartsWith("A"))).ToList();
+            var petListOfPetNameStartWithA = personList.SelectMany(x => x.Pets.Where(y => y.PetName.ToLower().StartsWith("a"))).ToList();
             var petListOfPetAgeBiggerThanFive = petListOfPetNameStartWithA.Where(x => x.PetAge > 5);
 
             //Exercise 2.2.
@@ -111,18 +111,37 @@ namespace _011_Linq_and_Lambda_exercises
             List<string> returnedStringList = ReturnUpperCaseWord(sentence);
 
             //Exercise 3
-            string FolderPath = @"C:\Windows";
-            DirectoryInfo di = new DirectoryInfo(FolderPath);
+            string FolderPath = @"C:\xampp\";
+            int folderPathLength = FolderPath.Length;
+            DirectoryInfo directory = new DirectoryInfo(FolderPath);
 
-            var getAllFiles = di.GetFiles().Select(file => file.Name).ToList();
+            //Get all file name + extention list
+            var getAllFiles = directory.GetFiles()
+                .Select(file => file.Name).ToList();
 
-            var getExtentions = getAllFiles.Select(y => y.Substring(y.Length - 4, 4)).Where(r => r.Contains(".")).ToList();
+            //Get all file fullname + extention list
+            var getAllFiles2 = directory.GetFileSystemInfos()
+                .Select(file => file.FullName).ToList();
 
-            var getFilesEndWithDll = getAllFiles.Where(x => x.EndsWith(".dll"));
+            //Get extention list - example: .txt, .csproj;
+            var getExtentions = getAllFiles.Select(y => y.Substring(y.Length - 4, 4))
+                .Where(r => r.Contains(".")).Distinct().ToList();
 
-            var getFileNames = getAllFiles.Where(x => x.Contains(".dll")).ToString().ToList();
-            var getFileNames2 = getAllFiles.Select(y => y.Substring(0, y.Length - 4)).ToList();
-            var getWindShellDotMany = getFileNames2.Where(r => r.Contains(".")).Select(y => y.Substring(0, y.Length - 5)).ToList();
+            //Get all files which ends .txt;
+            var getFilesEndWithTxt = getAllFiles2.Where(x => x.EndsWith(".txt"));
+
+            //Get all .txt file name list
+            /* var getFileTxtNames = getAllFiles.Where(x => x.Contains(".txt")).ToString().ToList();*/ //-testing, do not check
+
+            var getFileNames2 = getAllFiles.Where(x => x.Contains(".txt"))
+                .Select(y => y.Substring(0, y.Length - 4))
+                .ToList();
+
+            var getFileNames3 = getAllFiles2.Where(x => x.Contains(".txt")).
+                Select(y => y.Substring(folderPathLength, y.Length - folderPathLength))
+                .ToList();
+
+            //var getWindShellDotMany = getFileNames2.Where(r => r.Contains(".")).Select(y => y.Substring(0, y.Length - 5)).ToList();
 
         }
 

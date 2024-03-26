@@ -27,13 +27,6 @@ namespace _011_linq_and_lambda_intro
 
         private static void NumberLinqSampleOne()
         {
-            int a = 1;
-            int b = 2;
-            int c = 3;
-
-            //int d = (a, b, c) => a + b + c;
-
-
             List<int> numbers = new List<int>() { 888, 45, 1, 2, 2, 3, 4, 8, 79, 22, 42 };
             int firstNumber = numbers.First();
             //int firstNumberNineNonDefault = numbers.First(x => x == 9);
