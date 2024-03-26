@@ -171,9 +171,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_1_Anonymous_functions", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "011_Linq_and_Lambda", "011_Linq_and_Lambda", "{8DCE3FDA-313A-4212-BCF1-00354F05B028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "011_linq_and_lambda_intro", "011_linq_and_lambda_intro\011_linq_and_lambda_intro.csproj", "{894CA999-82B3-4E40-9A8A-9B61546CDD22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "011_linq_and_lambda_intro", "011_linq_and_lambda_intro\011_linq_and_lambda_intro.csproj", "{894CA999-82B3-4E40-9A8A-9B61546CDD22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "011_Linq_and_Lambda_exercises", "011_Linq_and_Lambda_exercises\011_Linq_and_Lambda_exercises.csproj", "{A0119522-9A04-423D-BD75-3A8D101DE182}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "011_Linq_and_Lambda_exercises", "011_Linq_and_Lambda_exercises\011_Linq_and_Lambda_exercises.csproj", "{A0119522-9A04-423D-BD75-3A8D101DE182}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "012_Interfaces_and_IComparer", "012_Interfaces_and_IComparer", "{25223AD6-989E-4EF1-823D-6F6AA1B6A343}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "012_Interfaces_and_IComparer_Intro", "012_Interfaces_and_IComparer_Intro\012_Interfaces_and_IComparer_Intro.csproj", "{72EA56EE-3D2C-48B5-9056-341F471D026B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -369,6 +373,10 @@ Global
 		{A0119522-9A04-423D-BD75-3A8D101DE182}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0119522-9A04-423D-BD75-3A8D101DE182}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0119522-9A04-423D-BD75-3A8D101DE182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72EA56EE-3D2C-48B5-9056-341F471D026B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72EA56EE-3D2C-48B5-9056-341F471D026B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72EA56EE-3D2C-48B5-9056-341F471D026B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72EA56EE-3D2C-48B5-9056-341F471D026B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -458,6 +466,8 @@ Global
 		{8DCE3FDA-313A-4212-BCF1-00354F05B028} = {256D6199-9DFE-48B6-9444-1499FED396B0}
 		{894CA999-82B3-4E40-9A8A-9B61546CDD22} = {8DCE3FDA-313A-4212-BCF1-00354F05B028}
 		{A0119522-9A04-423D-BD75-3A8D101DE182} = {8DCE3FDA-313A-4212-BCF1-00354F05B028}
+		{25223AD6-989E-4EF1-823D-6F6AA1B6A343} = {256D6199-9DFE-48B6-9444-1499FED396B0}
+		{72EA56EE-3D2C-48B5-9056-341F471D026B} = {25223AD6-989E-4EF1-823D-6F6AA1B6A343}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FB7A609C-DB28-41DF-BB8B-EA9BA52C3561}
