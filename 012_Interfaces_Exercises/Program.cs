@@ -7,15 +7,15 @@ namespace _012_Interfaces_Exercises
     {
         static void Main(string[] args)
         {
-            BmwCar bmdThreeTwoOu = new BmwCar(false, "BMW 320", 31);
+            BmwCar bmwThreeTwoOu = new BmwCar(false, "BMW 320", 31);
             AudiCar audiQSeven = new AudiCar(true, "Audi Q7", 19);
 
-            Console.WriteLine(bmdThreeTwoOu.Drive());
+            Console.WriteLine(bmwThreeTwoOu.Drive());
             Console.WriteLine(audiQSeven.Drive());
 
-            if (!bmdThreeTwoOu.Drive())
+            if (!bmwThreeTwoOu.Drive())
             {
-                bmdThreeTwoOu.Refuel(100);
+                bmwThreeTwoOu.Refuel(100);
             }
             if (!audiQSeven.Drive())
             {
@@ -23,7 +23,7 @@ namespace _012_Interfaces_Exercises
             }
 
             Console.WriteLine(audiQSeven.Drive());
-            Console.WriteLine(bmdThreeTwoOu.Model);
+            Console.WriteLine(bmwThreeTwoOu.Model);
             Console.WriteLine(audiQSeven.Model);
 
             List<BmwCar> bmwCars = new List<BmwCar>
