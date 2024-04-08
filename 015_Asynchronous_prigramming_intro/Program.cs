@@ -40,11 +40,13 @@
             //await Task.WhenAll(counterTask, printTask);
 
             //Exercise No 2----------------------------------------------------------
-            ReadFromFileService readFromFileService = new ReadFromFileService();
+            //ReadFromFileService readFromFileService = new ReadFromFileService();
 
-            var printDesktopItems = readFromFileService.PrintDesktopFiles(10);
+            //var getDesktopItems = readFromFileService.PrintFilesAndFolders();
+            //var printDesktopItems = readFromFileService.ProcessDesktopFiles(10);
 
-            await Task.WhenAll(printDesktopItems);
+            //await Task.WhenAll(getDesktopItems, printDesktopItems);
+
         }
     }
 }

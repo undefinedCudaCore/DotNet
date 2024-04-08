@@ -2,29 +2,35 @@
 {
     internal class ReadFromFileService
     {
-        private List<string> _list = new List<string>();
+        private List<string> _list;
         private int _count = 0;
-        private void GetFiles()
+        public async Task PrintFilesAndFolders()
         {
-            FileInfo[] cDirs = new DirectoryInfo(@"C:\Users\undefinedCudaCore\Desktop").GetFiles();
+            DirectoryInfo[] cDirs = new DirectoryInfo(@"C:\Users\undefinedCudaCore\Desktop").GetDirectories();
+            FileInfo[] cFiles = new DirectoryInfo(@"C:\Users\undefinedCudaCore\Desktop").GetFiles();
 
             Console.Clear();
 
-            foreach (var dir in cDirs)
+            foreach (var folders in cDirs)
             {
-                _list.Add(dir.FullName);
-                Console.WriteLine(dir);
+                //_list.Add(folders.FullName);
+                Console.WriteLine(folders);
+            }
+            foreach (var files in cFiles)
+            {
+                //_list.Add(files.FullName);
+                Console.WriteLine(files);
             }
         }
-        public async Task PrintDesktopFiles(int howManyTimesDoAction)
+        public async Task ProcessDesktopFiles(int howManyTimesDoAction)
         {
             while (_count < howManyTimesDoAction)
             {
-                GetFiles();
+                //_list = new List<string>();
+                PrintFilesAndFolders();
                 await Task.Delay(5000);
                 _count++;
             }
         }
-
     }
 }
