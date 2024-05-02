@@ -15,7 +15,6 @@ namespace _2_MongoDB_exONE
             var bookCollection = client.GetDatabase("Book").GetCollection<Book>("Book");
             var filter = Builders<Book>.Filter.Eq("BookName", "Good book");
             var update = Builders<Book>.Update.Set("BookName", "Good book2");
-            var updatePage = Builders<Book>.Update.AddToSet<string>("BookPages", "aaa"); ;
 
             var book = new Book("Good book");
             var page1 = new Page("Childe vile his his call mood could aisle he parasites eros in were more once coffined glare ne shrine as then night break name time loved but like was harolds none climes scene can if control thence fellow childe perchance to superstition scorching break so een he in coffined harold");
