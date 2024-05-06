@@ -4,6 +4,7 @@
     {
         public int AuthorId { get; set; }
         public int BlogId { get; set; }
+        public int Rating { get; set; }
 
         public Author Author { get; set; }
         public Blog Blog { get; set; }
